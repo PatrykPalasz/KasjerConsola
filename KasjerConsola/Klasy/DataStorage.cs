@@ -9,6 +9,7 @@ namespace KasjerConsola.Klasy
 {
     public class DataStorage
     {
+        // czemu static?
         public static void Storage(Sejf sejf)
         {
             Console.Clear();
@@ -16,7 +17,7 @@ namespace KasjerConsola.Klasy
             Console.WriteLine($"{ sejf.OpisN50000()} : {sejf.StanN50000()} szt.");
             Console.WriteLine($"{ sejf.OpisN20000()} : {sejf.StanN20000()} szt.");
             Console.WriteLine($"{ sejf.OpisN10000()} : {sejf.StanN10000()} szt.");
-            Console.ReadKey();
+            Console.ReadKey(); // jeszcze nie zapisano! :) co jak bedzie wyjatek?? :) 
 
                 FileStream stream = new FileStream("kasjer.dat", FileMode.Create);
 
@@ -32,6 +33,8 @@ namespace KasjerConsola.Klasy
 
         }
 
+        // czemu static?
+        // czemu zwraca kasetke? kasetka sie nie zmienia w tej metodzie...
         public static Sejf Load(Sejf kasetka)
         {
             try
@@ -46,13 +49,13 @@ namespace KasjerConsola.Klasy
 
                 reader.Dispose();
 
-                return kasetka;
+                return kasetka; // return 1
             }
             catch (Exception exception)
             {
                 Console.WriteLine($"Spodziewany błąd: {exception.Message}");
                 Console.ReadKey();
-                return kasetka;
+                return kasetka; // return 2 -pczemu?
             }
 
         }
