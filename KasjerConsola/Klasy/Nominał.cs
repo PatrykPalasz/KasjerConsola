@@ -7,9 +7,11 @@ using System.Threading.Tasks;
 namespace KasjerConsola.Klasy
 {
 
+    // polskie znaki!? :D 
     public class Nominał
     {
 
+        // czemu string??
         public string kasior;   // 500, 200, 100 ...
         public string waluta;
         decimal nominał;
@@ -35,7 +37,7 @@ namespace KasjerConsola.Klasy
             {
                 waluta = "zł.";
             }
-            else
+            else // ujemne, 0 ??
             {
                 waluta = "gr.";
             }
