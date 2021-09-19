@@ -14,6 +14,8 @@ namespace KasjerConsola
             {
                 x = menu();
 
+                // switche mozna w metody pozamieniac...
+                // metoda ktora nie miesci sie na ekranie jest z reguly zla... :( 
                 switch(x)
                 {
                     case 1:
